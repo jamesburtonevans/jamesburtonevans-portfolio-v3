@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/projects/project-styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+        <!-- page meta tags-- -->
+        <title>James Evans - Endel Boost</title>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <main>
+            <div id="intro" class="section">
+                <img id="cover" src="images/mu-gen_cover.png" alt="Cover Image">
+                <ul class="tags">
+                    <li>frontend development</li>
+                    <li>ui/ux</li>
+                </ul>
+                <h3 id="date">April 2026</h3>
+                <h1 id="title">mu.gen Frontend Development</h1>
+                <p>Frontend development for an adaptive and procedural functional music player.</p>
+                <ul class="skills">
+                    <li><i class="fa fa-pencil"></i>PENPOT</li>
+                    <li><i class="fa fa-code"></i>HTML/CSS</li>
+                    <li><i class="fa fa-code"></i>JS</li>
+                    <li><i class="fa fa-music"></i>TONE.JS</li>
+                </ul>
+                <div id="deliverables" class="container">
+                    <h3>Deliverables</h3>
+                    <div class="container">
+                        <a href="https://github.com/jamesburtonevans/mu.gen" class="deliverable">
+                            <i class="fa fa-github"></i>
+                            <p>Github Repository</p>
+                        </a>
+                        <a href="https://mu-gen.netlify.app/" class="deliverable">
+                            <i class="fa fa-code"></i>
+                            <p>Live site</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <hr>
+
+                <h2>Project Overview</h2>
+                <ul>
+                    <li><b>Type</b>: Frontend Development</li>
+                    <li><b>Role</b>: UX Engineer / Frontend Developer (Solo)</li>
+                    <li><b>Timeline</b>: 2 weeks</li>
+                    <li><b>Goal</b>: Create an initial frontend and UI system for my project <b>mu.gen</b> with HTML, CSS, and JS </li>
+                </ul>
+
+                <hr>
+
+                <h2>The Context</h2>
+                <p>I have always had a personal interest in the world of audio and music technology. Recently, I have used various <i>functional audio</i> apps, and with all of them I have ran into the same issue: <b>The musicality and sounds themselves are pre-made</b>. Some apps of this kind will procedurally arrange existing audio, thus only allowing for so much novelty. The idea of functional music is for it to be truly in-the-background, and when I would hear the same sounds again and again, I found myself thinking about the music instead of the work, relaxation, sleep, or other activity at hand.</p>
+                <p>And so, I thought of <b>mu.gen</b>. The premise is it uses on-the-fly synthesis, composition, and arrangement to create truly unique tracks that are formed algorithmically to fit any given context you choose.</p>
+                <p class="hint"><b>Clarification:</b> I do not plan on it being an AI app in any way, despite the name. It is procedurally generative audio.</p>
+
+                <hr>
+
+                <h2>The Approach</h2>
+
+                <h3>Starting the Project</h3>
+
+                <p>I started with creating a foundational backend architecture for the music generator itself initially using JavaScript and Tone.JS.</p>
+                <div class="side-by-side">
+                    <div class="image-grid">
+                        <img src="images/mu-gen_code-backend-01.png" alt="Backend Code">
+                    </div>
+                    <div>
+                        <p>I quickly found how complicated creating a procedural music system would take, so I decided that I would take a break from that so I have the time I need to learn it fluently. I got enough working to serve as a basic proof of concept for the system itself though.</p>
+                        <p>Some of the things I built are:</p>
+                        <ul>
+                            <li>Modular audio signal path routing setup</li>
+                            <li>Numerous programmed synths that could be played via sequences</li>
+                            <li>Procedural arrangement system for song sections</li>
+                            <li>State management to change various aspects of the song</li>
+                        </ul>
+                        <p>What I ultimately decided what would be best for the project is for me to get a working frontend before I continue delving into the specifics of the sound engine itself; especially as frontend development is my highest-leverage skill.</p>
+                    </div>
+                </div>
+
+                <h3>UI Conceptualization</h3>
+                <p>I wanted to ensure that I have a good understanding of what I was going to be building, so I first designed a rough prototype in Penpot.</p>
+                <div class="side-by-side">
+                    <div>
+                        <p>I usually don't spend too long on the visual prototyping phase too long; I really just like to get a basic structure and visual aesthetic started to get a good idea of where to begin building. </p>
+                        <p>As will be shown, this initial design prototype gave me a good direction for my final frontend design.</p>
+                    </div>
+                    <div class="image-grid">
+                        <img src="images/mu-gen_proto-01.png" alt="Prototype design">
+                    </div>
+                </div>
+
+                <h3>Frontend Development</h3>
+                <p>When doing frontend development, I always aim to make the UI as modular as possible. This project was no exception. I needed to ensure that I was designing the frontend in such a way that it could:</p>
+                <ul>
+                    <li>Actually function and communicate with the backend (such as play/pause)</li>
+                    <li>Be easily reconfigurable for different layouts</li>
+                    <li>Have components be generated via functions</li>
+                </ul>
+                <p>Instead of writing a static html page, I opted to write the UI with JavaScript so I could achieve these goals and specifications. </p>
+                <div class="image-grid gallery">
+                    <img class="gif" src="images/mu-gen_animation-demo_01.gif" alt="Demo of animation">
+                    <img class="gif" src="images/mu-gen_animation-demo_02.gif" alt="Demo of animation">
+                    <img src="images/mu-gen_final-01.png" alt="Final frontend design">
+                </div>
+                <p class="hint">Check the source code in my Github repository to see how I went about making this!</p>
+                <hr>
+
+                <h3>Takeaways</h3>
+                <p>Aside from making progress with this large project of mine, doing this frontend design helped me sharpen my current skills and learn new practices.</p>
+                <p>In doing this project, I learned:</p>
+                <ul>
+                    <li>Modular frontend design with JS</li>
+                    <li>Interactive UI state management</li>
+                    <li>Advanced CSS styling and animation</li>
+                </ul>
+                <p>Having created this project with only HTML, CSS, and vanilla JavaScript, I am confident with my ability to translate my visual design intuition into functional frontend interfaces. </p>
+            </div>
+        </main>
+        <script src="/components/nav-bar.js"></script>
+    </body>
+</html>

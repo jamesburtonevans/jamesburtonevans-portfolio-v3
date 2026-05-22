@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+        <!-- page meta tags-- -->
+        <title>James Evans</title>
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <main>
+            <div id="hero" class="section">
+                <div id="hero-content">
+                    <img id="hero-image" src="/assets/images/headshot_james-evans.png" alt="Headshot">
+                    <div id="hero-title">
+                        <h3>Hi, it's</h3>
+                        <h1>James Evans.</h1>
+                        <h2>UX ENGINEER | MULTI-DISIPLINARY CREATIVE</h2>
+                        <div id="hero-description">
+                            <p>I build experiences that invite people to authentically engage with their life; not further abstract from it.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="resume-button">
+                    <a class="resume-download" href="/assets/james-evans_resume.pdf" download="">My Resume</a>
+                </div>
+            </div>
+            <hr>
+            <div id="about" class="section">
+                <div id="text-container">
+                    <h1>About Me</h1>
+                    <p>I am a designer and developer who works from idea to implementation. I ground my work in the experience of the person using it. I am drawn to work that adds to people's lives rather than substituting for them.</p>
+                </div>
+                <div id="skills-container">
+                    <ul class="skills">
+                        <li><i class="fa fa-code"></i>HTML / CSS / JS</li>
+                        <li><i class="fa fa-code"></i>PYTHON</li>
+                        <li><i class="fa fa-github"></i>GITHUB</li>
+                        <li><i class="fa fa-pencil"></i>FIGMA / PENPOT</li>
+                        <li><i class="fa fa-pencil"></i>ADOBE SUITE / INKSCAPE</li>
+                        <li><i class="fa fa-cube"></i>BLENDER</li>
+                        <li><i class="fa fa-music"></i>MUSIC PRODUCTION (ARDOUR)</li>
+                    </ul>
+                    <p class="hint">I like to use open source software wherever possible.</p>
+                </div>
+            </div>
+            <hr>
+            <div id="work">
+                <h1>The Work</h1>
+                <project-card href="projects/mu-gen/mu-gen.html" title="mu.gen Frontend Development" description="Frontend development for an adaptive and procedural functional music player." tags="frontend development, ui/ux" cover="projects/mu-gen/images/mu-gen_cover.png"></project-card>
+                <project-card href="projects/endel-boost/endel-boost.html" title="Endel Boost" description="Conceptual design expanding Endel's adaptive audio platform into physical performance with four new fitness-focused soundscape tracks." tags="conceptual, mobile, ux" cover="projects/endel-boost/images/endelboost-cover.png"></project-card>
+            </div>
+            <hr>
+            <div id="contact" class="section">
+                <li><i class="fa fa-envelope"></i><a href="mailto:james@jamesburtonevans.com">james@jamesburtonevans.com</a></li>
+                <li><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/james-evans-design" target="_blank" rel="noopener">linkedin.com/in/james-evans-design</a></li>
+                <li><i class="fa fa-github"></i><a href="https://github.com/jamesburtonevans/" target="_blank" rel="noopener">https://github.com/jamesburtonevans/</a></li>
+            </div>
+        </main>
+        <script src="/components/nav-bar.js"></script>
+        <script src="/components/project-card.js"></script>
+    </body>
+</html>
