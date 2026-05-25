@@ -9,6 +9,7 @@
 #content h2 {
     font-size: 4rem;
     margin-bottom: -1rem;
+    text-decoration-thickness: 2px;
 }
 
 #content h3 {
@@ -22,6 +23,7 @@
     margin-bottom: -1rem;
     text-decoration: underline;
     text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 1px;
 }
 
 #content p {
@@ -46,6 +48,7 @@
     line-height: 5rem;
     text-decoration: underline;
     text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 3px;
 }
 
 /* LAYOUT */
@@ -71,6 +74,7 @@
     justify-content: left;
     margin-inline: auto;
     overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .image-grid img {
