@@ -31,7 +31,7 @@ class NavBar extends HTMLElement {
 
     navList.appendChild(navListItem("/", "Home"));
     navList.appendChild(navListItem("/about.html", "About"));
-    navList.appendChild(navListItem("/", "Work"));
+    navList.appendChild(navListItem("/work.html", "Work"));
     navContainer.appendChild(navList);
 
     container.appendChild(logoContainer);

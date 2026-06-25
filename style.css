@@ -154,6 +154,12 @@ hr {
     border-top-style: dotted;
 }
 
+.button {
+    background-color: var(--color-lighten-m);
+    width: fit-content;
+    jkl
+}
+
 /* Font Defaults */
 p {
     line-height: 2rem;
@@ -391,3 +397,5 @@ a {
     font-weight: normal;
     font-size: var(--size-l);
 }
+
+.

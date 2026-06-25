@@ -5,6 +5,7 @@ My portfolio site
 ## To Do
 
 ## Doing
+- [ ] content/page for school assignments
 
 ## Done
 - [x] feat/header component
@@ -16,6 +17,8 @@ My portfolio site
 - [x] content/page for mu.gen frontend development
 - [x] feat/project page stylesheet
 - [x] content/page for the task
+- [x] feat/work section
 
 ## Backlog
 - [ ] content/page for portfolio itself
+- [ ] content/photos on about page
