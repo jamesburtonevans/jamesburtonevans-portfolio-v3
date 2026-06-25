@@ -154,10 +154,23 @@ hr {
     border-top-style: dotted;
 }
 
-.button {
-    background-color: var(--color-lighten-m);
+.button button {
+    background-color: transparent;
+    color: var(--color-m);
+    font-size: 1.5rem;
+    border: 0.1rem solid var(--color-d);
     width: fit-content;
-    jkl
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin: 1rem;
+    align-self: center;
+    padding: 1rem;
+    padding-inline: 3rem;
+    transition: var(--transition-s);
+}
+
+.button button:hover {
+    transform: scale(1.05);
 }
 
 /* Font Defaults */
@@ -331,6 +344,7 @@ a {
 #contact li {
     text-decoration: underline;
     text-decoration-color: transparent;
+    margin-top: 1rem;
     transition: transform var(--transition-s), text-decoration-color var(--transition-s);
 }
 
@@ -397,5 +411,3 @@ a {
     font-weight: normal;
     font-size: var(--size-l);
 }
-
-.
