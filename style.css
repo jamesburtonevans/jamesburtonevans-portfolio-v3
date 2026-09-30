@@ -21,7 +21,7 @@
     --color-accent-highlight: rgba(75, 100, 75, 0.2);
 
     /* Shadow */
-    --shadow-1:inset 0 0 0.5rem var(--color-shadow-m), 0 0 0.5rem var(--color-shadow-m);
+    --shadow-1: 0 0 0.5rem var(--color-shadow-m);
     --shadow-2: 0 0.1rem 0.25rem var(--color-shadow-d);
 
     /* Font Families */
@@ -160,9 +160,10 @@ hr {
 }
 
 .button button {
-    background-color: transparent;
-    color: var(--color-m);
+    background-color: var(--color-background-d);
+    color: var(--color-l);
     font-size: 1.5rem;
+    font-weight: bold;
     border: 0.1rem solid var(--color-d);
     width: fit-content;
     border-radius: 0.2rem;
@@ -170,8 +171,9 @@ hr {
     margin: 1rem;
     align-self: center;
     padding: 1rem;
-    padding-inline: 3rem;
+    padding-inline: 2rem;
     transition: var(--transition-s);
+    box-shadow: var(--shadow-1);
 }
 
 .button button:hover {
@@ -295,7 +297,7 @@ a {
 #hero-image {
     width: 50%;
     max-width: 30rem;
-    min-width: 10rem;
+    min-width: 20rem;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
     margin: 1rem;
@@ -340,14 +342,19 @@ a {
 #contact {
     display: flex;
     flex-direction: column;
+}
+
+#contact ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 #contact i {
     margin-right: 1rem;
 }
 
-#contact li {
+#contact ul > li {
     text-decoration: underline;
     text-decoration-color: transparent;
     margin-top: 1rem;
@@ -371,7 +378,8 @@ a {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
+    border: 0.1rem solid var(--color-m);
     text-decoration: none;
     color: var(--color-ll);
     box-shadow: var(--shadow-1);
@@ -390,9 +398,9 @@ a {
     max-width: 40rem;
     aspect-ratio: 3/2;
     overflow: hidden;
+    border: 0.1rem solid var(--color-m);
     border-radius: 0.5rem;
-    box-shadow: var(--shadow-1);
-    transition: transform var(--transition-s);
+    transition: transform var(--transition-s), box-shadow var(--transition-s);
 }
 
 .cover-div img {
@@ -402,6 +410,7 @@ a {
 
 .project-card:hover .cover-div {
     transform: scale(1.025);
+    box-shadow: var(--shadow-1);
 }
 
 .project-card .text-container {
@@ -418,4 +427,21 @@ a {
 .project-card h3 {
     font-weight: normal;
     font-size: var(--size-l);
+}
+
+/* Responsiveness */
+
+@media (max-width: 700px) {
+    #nav-bar {
+        flex-wrap: wrap;
+    }
+
+    #nav-bar #links #nav-list {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    #hero-title h1 {
+        font-size: clamp(3rem, 16vw, 6rem);
+    }
 }

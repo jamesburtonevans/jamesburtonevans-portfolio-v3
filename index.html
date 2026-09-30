@@ -1,17 +1,47 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- required meta tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
-    <!-- page meta tags-- -->
-    <title>James Evans - Product Designer Frontend</title>
-    <meta name="description" content="James Evans is a Raleigh, NC product designer and frontend developer designing and building usable digital products."
-    />
-  </head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>James Burton Evans - Product Designer and Frontend Developer</title>
+      <meta
+        name="description"
+        content="James Burton Evans is a Raleigh, NC product designer and frontend developer designing and building usable digital products."
+      />
+      <link rel="canonical" href="https://jamesburtonevans.com/" />
+      <meta property="og:title" content="James Burton Evans - Product Designer and Frontend Developer" />
+      <meta
+        property="og:description"
+        content="Raleigh, NC product designer and frontend developer designing and building usable digital products."
+      />
+      <meta property="og:url" content="https://jamesburtonevans.com/" />
+      <meta property="og:type" content="website" />
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://jamesburtonevans.com/#person",
+        "name": "James Burton Evans",
+        "alternateName": "James Evans",
+        "url": "https://jamesburtonevans.com/",
+        "jobTitle": "Product Designer and Frontend Developer",
+        "description": "Product designer and frontend developer based in Raleigh, North Carolina.",
+        "sameAs": [
+          "https://linkedin.com/in/jamesburtonevans",
+          "https://github.com/jamesburtonevans/"
+        ]
+      }
+      </script>
+      <link rel="stylesheet" type="text/css" href="/style.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet"
+      />
+    </head>
   <body>
     <nav-bar></nav-bar>
     <main>
@@ -30,6 +60,18 @@
         </div>
         <div id="resume-button">
           <a class="resume-download" href="/assets/james-evans_resume.pdf" download="">My Resume</a>
+        </div>
+      </div>
+      <hr>
+      <div id="work">
+        <h1>Projects</h1>
+        <project-card href="projects/ardour-ux/ardour-ux.html" title="Ardour UX Exploration" description="Improving four high-friction workflows in Ardour without disrupting its existing interaction model." tags="ui/ux, open source" cover="projects/ardour-ux/images/ardour-ux_cover.png"></project-card>
+        <project-card href="projects/endel-boost/endel-boost.html" title="Endel Boost" description="Conceptual design expanding Endel's adaptive audio platform into physical performance with four new fitness-focused soundscape tracks." tags="conceptual, mobile, ux" cover="projects/endel-boost/images/endelboost-cover.png"></project-card>
+        <project-card href="projects/mu-gen/mu-gen.html" title="mu.gen Frontend Development" description="Frontend development for an adaptive and procedural functional music player." tags="frontend development, ui/ux" cover="projects/mu-gen/images/mu-gen_cover.png"></project-card>
+        <div id="more work" class="button">
+          <a href="/work.html">
+            <button>See all work</button>
+          </a>
         </div>
       </div>
       <hr>
@@ -52,23 +94,13 @@
         </div>
       </div>
       <hr>
-      <div id="work">
-        <h1>Projects</h1>
-        <project-card href="projects/ardour-ux/ardour-ux.html" title="Ardour UX Exploration" description="Improving four high-friction workflows in Ardour without disrupting its existing interaction model." tags="ui/ux, open source" cover="projects/ardour-ux/images/ardour-ux_cover.png"></project-card>
-        <project-card href="projects/endel-boost/endel-boost.html" title="Endel Boost" description="Conceptual design expanding Endel's adaptive audio platform into physical performance with four new fitness-focused soundscape tracks." tags="conceptual, mobile, ux" cover="projects/endel-boost/images/endelboost-cover.png"></project-card>
-        <project-card href="projects/mu-gen/mu-gen.html" title="mu.gen Frontend Development" description="Frontend development for an adaptive and procedural functional music player." tags="frontend development, ui/ux" cover="projects/mu-gen/images/mu-gen_cover.png"></project-card>
-        <div id="more work" class="button">
-          <a href="/work.html">
-            <button>See all work</button>
-          </a>
-        </div>
-      </div>
-      <hr>
       <div id="contact" class="section">
         <h1>Let's get in touch!</h1>
-        <li><i class="fa fa-envelope"></i><a href="mailto:james@jamesburtonevans.com">james@jamesburtonevans.com</a></li>
-        <li><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/jamesburtonevans" target="_blank" rel="noopener">linkedin.com/in/jamesburtonevans</a></li>
-        <li><i class="fa fa-github"></i><a href="https://github.com/jamesburtonevans/" target="_blank" rel="noopener">https://github.com/jamesburtonevans/</a></li>
+        <ul>
+          <li><i class="fa fa-envelope"></i><a href="mailto:james@jamesburtonevans.com">james@jamesburtonevans.com</a></li>
+          <li><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/jamesburtonevans" target="_blank" rel="noopener">linkedin.com/in/jamesburtonevans</a></li>
+          <li><i class="fa fa-github"></i><a href="https://github.com/jamesburtonevans/" target="_blank" rel="noopener">https://github.com/jamesburtonevans/</a></li>
+        </ul>
       </div>
     </main>
     <script src="/components/nav-bar.js"></script>
