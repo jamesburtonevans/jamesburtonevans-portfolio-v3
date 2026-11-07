@@ -65,9 +65,46 @@
       <hr>
       <div id="work">
         <h1>Projects</h1>
-        <project-card href="projects/mixdown/mixdown.html" title="Mixdown Release Tracker" description="A release tracker for independent musicians, designed and built from sketch to deployed React app." tags="product design, frontend development" cover="projects/mixdown/images/mixdown_final.png"></project-card>
-        <project-card href="projects/ardour-ux/ardour-ux.html" title="Ardour UX Exploration" description="Improving four high-friction workflows in Ardour without disrupting its existing interaction model." tags="ui/ux, open source" cover="projects/ardour-ux/images/ardour-ux_cover.png"></project-card>
-        <project-card href="projects/endel-boost/endel-boost.html" title="Endel Boost" description="Conceptual design expanding Endel's adaptive audio platform into physical performance with four new fitness-focused soundscape tracks." tags="conceptual, mobile, ux" cover="projects/endel-boost/images/endelboost-cover.png"></project-card>
+        <a class="project-card" href="projects/mixdown/mixdown.html">
+          <div class="cover-div">
+            <img src="projects/mixdown/images/mixdown_final.png" alt="Mixdown Release Tracker">
+          </div>
+          <div class="text-container">
+            <ul class="tags">
+              <li>product design</li>
+              <li>frontend development</li>
+            </ul>
+            <h1>Mixdown Release Tracker</h1>
+            <h3>A release tracker for independent musicians, designed and built from sketch to deployed React app.</h3>
+          </div>
+        </a>
+        <a class="project-card" href="projects/ardour-ux/ardour-ux.html">
+          <div class="cover-div">
+            <img src="projects/ardour-ux/images/ardour-ux_cover.png" alt="Ardour UX Exploration">
+          </div>
+          <div class="text-container">
+            <ul class="tags">
+              <li>ui/ux</li>
+              <li>open source</li>
+            </ul>
+            <h1>Ardour UX Exploration</h1>
+            <h3>Improving four high-friction workflows in Ardour without disrupting its existing interaction model.</h3>
+          </div>
+        </a>
+        <a class="project-card" href="projects/endel-boost/endel-boost.html">
+          <div class="cover-div">
+            <img src="projects/endel-boost/images/endelboost-cover.png" alt="Endel Boost">
+          </div>
+          <div class="text-container">
+            <ul class="tags">
+              <li>conceptual</li>
+              <li>mobile</li>
+              <li>ux</li>
+            </ul>
+            <h1>Endel Boost</h1>
+            <h3>Conceptual design expanding Endel's adaptive audio platform into physical performance with four new fitness-focused soundscape tracks.</h3>
+          </div>
+        </a>
         <div id="more work" class="button">
           <a href="/work.html">
             <button>See all work</button>
@@ -104,6 +141,5 @@
       </div>
     </main>
     <script src="/components/nav-bar.js"></script>
-    <script src="/components/project-card.js"></script>
   </body>
 </html>
