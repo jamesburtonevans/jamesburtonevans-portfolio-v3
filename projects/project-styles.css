@@ -36,7 +36,12 @@
 
 /* INTRO */
 #cover {
+    display: block;
     width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: top;
     border-radius: 0.5rem;
     box-shadow: var(--shadow-1);
     margin-bottom: 1rem;
@@ -64,52 +69,43 @@
 }
 
 /* IMAGE GRIDS */
-
 .image-grid {
-    width: fit-content;
-    max-width: 100%;
-    height: auto;
     display: flex;
-    padding: 1rem;
-    justify-content: left;
-    margin-inline: auto;
-    overflow-x: scroll;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+    box-sizing: border-box;
 }
 
-.image-grid * {
-    width: 100%;
-    min-width: 10rem;
+.image-grid > div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.image-grid img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
     max-height: 40rem;
     border-radius: 0.25rem;
-    margin: 1rem;
-    object-fit: cover;
     filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.25));
 }
 
-.gallery {
-    overflow-x: hidden;
-    flex-wrap: wrap;
-    justify-content: center;
+.image-grid .gif {
+    max-width: min(18rem, 100%);
 }
 
-.image-grid > * > img {
-    flex: 1 1 20rem;
-    height: 15rem;
-}
-
-.gif {
-    max-width: 18rem;
-}
-
-.no-round {
-    border-radius: 0 !important;
+.image-grid .no-round {
+    border-radius: 0;
 }
 
 .caption {
     text-align: center;
-    margin: 0;
-    margin-top: -1rem;
+    margin: 0.5rem 0 0;
 }
 
 .video-embed {
@@ -117,7 +113,11 @@
     justify-content: center;
 }
 
-.video-embed > *{
+.video-embed > * {
+    width: 100%;
+    max-width: 35rem;
+    height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 0.25rem;
     border: 0.1rem solid var(--color-m);
     filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.25));
@@ -133,7 +133,7 @@
     margin: 0.5rem;
     margin-top: 1rem;
     border-radius: 0.25rem;
-    border: 0.15rem solid var(--color-lighten-l)
+    border: 0.15rem solid var(--color-lighten-l);
 }
 
 #deliverables h3 {
@@ -201,6 +201,4 @@
     #content h3 {
         font-size: clamp(1.75rem, 9vw, 3rem);
     }
-}
-
 }

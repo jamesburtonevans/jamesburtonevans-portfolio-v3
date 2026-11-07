@@ -10,7 +10,6 @@ class ProjectCard extends HTMLElement {
     // main container
     const container = document.createElement('a');
     container.className = "project-card";
-    container.classList.add = "container";
     container.href = href;
 
     // card components
@@ -36,6 +35,7 @@ class ProjectCard extends HTMLElement {
     coverContainer.className = "cover-div";
     const cover = document.createElement('img');
     cover.src = coverImage;
+    cover.alt = title;
 
 
     // append
