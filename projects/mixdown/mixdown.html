@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/projects/project-styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+        <!-- page meta tags -->
+        <title>James Burton Evans - Mixdown Release Tracker</title>
+        <meta
+          name="description"
+          content="A release tracker for independent musicians, designed and built from sketch to deployed React app."
+        />
+    </head>
+    <body>
+        <nav-bar></nav-bar>
+        <main>
+            <div id="intro" class="section">
+                <img id="cover" src="images/mixdown_final.png" alt="Cover Image">
+                <ul class="tags">
+                    <li>product design</li>
+                    <li>frontend development</li>
+                </ul>
+                <h3 id="date">November 2026</h3>
+                <h1 id="title">Mixdown Release Tracker</h1>
+                <p>A release tracker for independent musicians, designed and built from sketch to deployed React app.</p>
+                <ul class="skills">
+                    <li><i class="fa fa-pencil"></i>EXCALIDRAW</li>
+                    <li><i class="fa fa-pencil"></i>FIGMA</li>
+                    <li><i class="fa fa-code"></i>REACT</li>
+                    <li><i class="fa fa-code"></i>TYPESCRIPT</li>
+                </ul>
+                <div id="deliverables" class="container">
+                    <h3>Deliverables</h3>
+                    <div class="container">
+                        <a href="https://github.com/jamesburtonevans/mixdown" class="deliverable">
+                            <i class="fa fa-github"></i>
+                            <p>Github Repository</p>
+                        </a>
+                        <a href="https://mixdown-releasetracker.netlify.app/" class="deliverable">
+                            <i class="fa fa-code"></i>
+                            <p>Live site</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <hr>
+
+                <h2>Project Overview</h2>
+                <ul>
+                    <li><b>Type</b>: Product Design / Frontend Development</li>
+                    <li><b>Role</b>: Product Designer / Frontend Developer (Solo)</li>
+                    <li><b>Timeline</b>: 1 week</li>
+                    <li><b>Goal</b>: Design and build a small, accessible app for tracking a music release from first draft to distribution</li>
+                </ul>
+
+                <hr>
+
+                <h2>The Context</h2>
+                <p>As a music producer, releasing anything means keeping track of a lot of unfinished work at once: which songs are mixed, which are mastered, whether the artwork is done, and what is actually blocking the release date. I have tried tracking this in generic to-do apps, but they flatten everything into a single list and lose everything that goes into the work.</p>
+                <p>So I made <b>Mixdown</b>. It organizes work around the <i>release</i> instead of the task: a release holds tracks and release-wide tasks, and every track moves through the same stages.</p>
+
+                <hr>
+
+                <h2>The Approach</h2>
+
+                <h3>Scoping the Problem</h3>
+                <p>I started by defining a small MVP: create releases, add tracks, set a status for each production stage, manage release tasks like artwork and distribution, and persist everything in localStorage.</p>
+                <p>The central design decision was the <b>stage view</b>. Tracks are rows, while stages (write, record, mix, master) are columns; each cell holds one of five statuses. Reading across a row tells you where a song is, and reading down a column tells you what is holding the release up. That grid is the whole product, so I started by sketching it and then built it before anything else.</p>
+
+                <h3>Sketching the Idea</h3>
+                <p>Before writing any code, I sketched the stage view in Excalidraw to test whether the grid actually read well.</p>
+                <div class="side-by-side">
+                    <div>
+                        <p>The sketch settled a few things early:</p>
+                        <ul>
+                            <li>Releases and their songs share one set of stage columns, so everything lines up.</li>
+                            <li>Each release row rolls up its tracks ("2/3" under write), so progress is visible without expanding it.</li>
+                            <li>Releases are grouped by where they are in their life: upcoming, backlog, and released.</li>
+                            <li>Release-wide work like distribution sits in the same grid as a final column.</li>
+                        </ul>
+                        <p>Not all of this made the MVP, but the core grid and the per-stage progress carried straight through to the final build.</p>
+                    </div>
+                    <div class="image-grid">
+                        <img src="images/mixdown_excalidraw.png" alt="Excalidraw sketch of the Mixdown stage view">
+                    </div>
+                </div>
+
+                <h3>Data First</h3>
+                <p>I decided to build the whole app before touching any visual design. I set up the React, Vite, and TypeScript project myself and started with the data model: a <code>Status</code> type with five values, a <code>Track</code> with a status per stage, a <code>Task</code>, and a <code>Release</code> that owns both lists. Getting this right early meant the UI was mostly a direct reflection of the data.</p>
+                <div class="side-by-side">
+                    <div class="image-grid">
+                        <img src="images/mixdown_table-raw.png" alt="Unstyled table rendering raw state">
+                    </div>
+                    <div>
+                        <p>My first render was just the state dumped onto the page, to check that the model and the statuses were right.</p>
+                        <p>Seeing "donedonein-reviewtodo" run together was not pretty, but it showed the shape of the data worked.</p>
+                    </div>
+                </div>
+
+                <h3>A Working Table</h3>
+                <p>Next I turned that data into the actual stage grid, with a dropdown per cell wired to state. From there I built out all of the functionality: creating, editing, and deleting releases, tracks, and tasks, collapsing releases, per-stage progress summaries, and saving everything to localStorage. It was still unstyled, but at this point it was a tool I could actually use.</p>
+                <div class="image-grid">
+                    <img src="images/mixdown_table-formatted_with-state.png" alt="Formatted table with working status dropdowns">
+                </div>
+
+                <h3>Designing the Interface</h3>
+                <p>With a fully working app, I moved into Figma. Designing last meant I knew exactly what the interface needed to do. I used Claude Code to turn the HTML output of my TypeScript into a first pass of the design in Figma, which gave me a real, editable starting point that directly referenced what I had built.</p>
+                <div class="image-grid">
+                    <img src="images/mixdown_figma-claude.png" alt="Initial Figma generation of the app and its components">
+                </div>
+                <p>It captured the structure well, but it was generic. Furthermore, there were some accessibility and usability nightmares. I took over from there and styled it myself, giving it a dark surface with a single orange accent that is used only for things you can act on and for completed states.</p>
+                <p>I was able to be a lot more immediately creative with the deisgn as I ensured Claude Code made everything a design token and component.</p>
+                <div class="image-grid">
+                    <img src="images/mixdown_figma-styled.png" alt="Styled Figma design of Mixdown">
+                </div>
+                <p>A few decisions I made along the way:</p>
+                <ul>
+                    <li><b>Never color alone</b>: Each status has a text label as well as a color, so progress is readable without relying on hue.</li>
+                    <li><b>Progress at a glance</b>: Each release shows a summary per stage ("write: 2 of 3 tracks done") so you do not have to scan the grid to know where you are.</li>
+                    <li><b>Collapsible releases</b>: A release you are not working on should get out of the way.</li>
+                    <li><b>Keyboard and semantic first</b>: Real labeled form controls, visible focus states, and semantic HTML, so accessibility came from the structure rather than being patched on afterwards.</li>
+                </ul>
+
+                <h3>Final Build</h3>
+                <p>Since the app already worked, the last step was applying the design to it. I translated the Figma tokens and components into CSS and swapped the plain controls for the styled ones, without having to change how anything functioned. Then I deployed it on Netlify.</p>
+                <div class="image-grid">
+                    <img src="images/mixdown_final.png" alt="Final Mixdown app">
+                </div>
+                <p class="hint">Check the source code in my Github repository to see how it is built!</p>
+
+                <hr>
+
+                <h3>Takeaways</h3>
+                <p>Building the app first and designing it second was a different order than I usually work in, and it paid off. Settling on releases, tracks, stages, and statuses early meant the visual work could focus on clarity instead of figuring out what the app was.</p>
+                <p>In doing this project, I learned:</p>
+                <ul>
+                    <li>Building a React and TypeScript app from the data model outward</li>
+                    <li>Designing on top of working code, using Claude Code to bring it into Figma</li>
+                    <li>Building accessible status UI that does not rely on color</li>
+                </ul>
+                <p>There are some features that I may add in the future, but overall it was a really cool experience designing and developing with React for the first time.</p>
+            </div>
+        </main>
+        <script src="/components/nav-bar.js"></script>
+    </body>
+</html>
