@@ -335,6 +335,20 @@ a {
     cursor: default;
 }
 
+/* Other Work */
+#other-work ul > li {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    margin-top: 1rem;
+    transition: transform var(--transition-s), text-decoration-color var(--transition-s);
+}
+
+#other-work li:hover {
+    transform: scale(0.99);
+    text-decoration-color: var(--color-ll);
+}
+
 /* Contact Section */
 #contact {
     display: flex;
